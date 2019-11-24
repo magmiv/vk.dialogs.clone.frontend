@@ -1,0 +1,99 @@
+.dialog {
+   display: flex;
+   align-items: center;
+   height: 71px;
+   cursor: pointer;
+
+   &:first-child {
+      margin-top: 50px;
+   }
+
+   &:hover {
+      background-color: #F5F7FA;
+
+      .image-wrapper {
+         border-top: 1px solid #e7e8ec;
+         border-bottom: 1px solid #e7e8ec;
+      }
+
+      .dialog-info {
+         border-top: 1px solid #e7e8ec;
+         
+         .last-message span.unread {
+            background-color: #e9edf2 !important;
+         }
+      }
+   }
+
+   .image-wrapper {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      img {
+         width: 50px;
+         height: 50px;
+         margin: 0 14px 0 20px;
+         border-radius: 100%;
+      }
+   }
+
+   .dialog-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding-right: 40px;
+      height: 100%;
+      border-bottom: 1px solid #e7e8ec;
+
+      .top-line {
+         display: flex;
+         align-items: flex-start;
+         justify-content: space-between;
+
+         .dialog-name {
+            margin-bottom: 9px;
+            color: #222;
+            font-family: 'Roboto Medium';
+            font-weight: 100;
+            font-size: 13px;
+         }
+
+         .time {
+            color: #777e8c;
+            font-size: 12.5px;
+         }
+      }
+
+      .last-message {
+         display: flex;
+         align-items: center;
+
+         img {
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            margin-right: 8px;
+         }
+
+         span {
+            flex-grow: 1;
+            // Don't know why, but that's doesn't work without that
+            width: 0;
+            font-size: 13px;
+            padding-right: 63px;
+            color: #4e5966;
+            border-radius: 3px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            
+            &.unread {
+               padding: 5px 55px 5px 8px;
+               background: #F0F2F5;
+            }
+         }
+      }
+   }
+}

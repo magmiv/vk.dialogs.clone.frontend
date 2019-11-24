@@ -4,7 +4,7 @@ import './search.scss';
 
 const Search = () => (
    <div className="search">
-      <input className="find-message" placeholder="Поиск"></input>
+      <input className="find-message" placeholder="Поиск" autoFocus></input>
       <div className="create-dialog">
          <button></button>
       </div>

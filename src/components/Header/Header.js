@@ -4,7 +4,7 @@ import './header.scss';
 
 const Header = () => (
    <div className="header">
-      123
+
    </div>
 );
 

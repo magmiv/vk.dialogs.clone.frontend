@@ -1,13 +1,21 @@
 .search {
    width: 100%;
+   max-width: 650px;
    height: 50px;
    display: flex;
    border-bottom: 1px solid #d7d8db;
+   border-radius: 4px 4px 0 0;
+   position: fixed;
+   background-color: #fff;
+   z-index: 11;
+   box-shadow: 0 -1px 0 0px #e3e4e8;
 
+   
    input {
       flex-grow: 1;
       height: calc(100% - 2px);
       border-left: 45px solid transparent;
+      
 
       font-size: 13px;
       

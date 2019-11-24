@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
 
-import DialogsList from './DialogsList/DialogsList.js';
+import DialogsPage from './DialogsPage/DialogsPage.js';
 
 import './messagesPage.scss';
 
@@ -9,7 +9,7 @@ const MessagePage = () => (
    <div className="message-page">
       <Switch>
          <Route path="/im/">
-            <DialogsList />
+            <DialogsPage />
          </Route>
       </Switch>
    </div>
