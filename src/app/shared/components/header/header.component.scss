@@ -1,0 +1,11 @@
+@import '../../../../assets/variables.scss';
+
+.header {
+   width: 100%;
+   min-height: $header-height;
+   background-color: #4A76A8;
+   position: fixed;
+   z-index: 50;
+   top: 0;
+   left: 0;
+}

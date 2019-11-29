@@ -1,5 +1,5 @@
 {
-  "name": "vk.dialogs.clone.frontend",
+  "name": "vk-dialogs-clone-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

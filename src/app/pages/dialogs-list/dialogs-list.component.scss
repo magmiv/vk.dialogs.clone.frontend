@@ -1,0 +1,193 @@
+@import '../../../assets/variables.scss';
+
+.dialogs-list-page {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   .dialogs-list-wrapper {
+      width: 100%;
+      max-width: 650px;
+      height: 100%;
+      margin-top: $header-height + 14px;
+      background-color: #fff;
+      border: 1px solid #E3E4E8;
+      border-radius: 4px;
+      box-shadow: 0 0px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+   
+      &:before {
+       content: '';
+       width: calc(100% + 10px);
+       height: 14px;
+       position: fixed;
+       z-index: 10;
+       top: $header-height;
+       left: 0;
+       background-color: #EDEEF0;
+      }
+   }
+}
+
+
+.search {
+   width: 100%;
+   max-width: 650px;
+   height: 50px;
+   display: flex;
+   border-bottom: 1px solid #d7d8db;
+   border-radius: 4px 4px 0 0;
+   position: fixed;
+   background-color: #fff;
+   z-index: 11;
+   box-shadow: 0 -1px 0 0px #e3e4e8;
+
+   
+   input {
+      flex-grow: 1;
+      height: calc(100% - 2px);
+      border-left: 45px solid transparent;
+      font-size: 13px;
+      transition: 0.2s ease;
+
+      // background width - 14px
+      background: url('../../../assets/search.png') -25px center no-repeat;
+
+      &::placeholder {
+         color: #929eb0;
+      }
+
+      &:focus::placeholder {
+         color: #c0c8d0;
+      }
+   }
+   
+   .create-dialog {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      button {
+         width: 16px;
+         height: 14px;
+         background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2014%2014%22%3E%3Cpath%20fill%3D%22%2391A8C4%22%20d%3D%22M8%206v-6h-2v6h-6v2h6v6h2v-6h6v-2h-6z%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+         transition: 0.3s;
+      }
+
+      &.active {
+         button {
+            transform: rotate(45deg);
+         }
+      }
+   }
+}
+
+
+.dialogs-list {
+   display: flex;
+   flex-direction: column;
+   
+   .dialog {
+      display: flex;
+      align-items: center;
+      height: 71px;
+      cursor: pointer;
+   
+      &:first-child {
+         margin-top: 50px;
+      }
+   
+      &:hover {
+         background-color: #F5F7FA;
+   
+         .image-wrapper {
+            border-top: 1px solid #e7e8ec;
+            border-bottom: 1px solid #e7e8ec;
+         }
+   
+         .dialog-info {
+            border-top: 1px solid #e7e8ec;
+            
+            .last-message span.unread {
+               background-color: #e9edf2 !important;
+            }
+         }
+      }
+   
+      .image-wrapper {
+         display: flex;
+         align-items: center;
+         height: 100%;
+   
+         img {
+            width: 50px;
+            height: 50px;
+            margin: 0 14px 0 20px;
+            border-radius: 100%;
+         }
+      }
+   
+      .dialog-info {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         width: 100%;
+         padding-right: 40px;
+         height: 100%;
+         border-bottom: 1px solid #e7e8ec;
+   
+         .top-line {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+   
+            .dialog-name {
+               margin-bottom: 9px;
+               color: #222;
+               font-family: 'Roboto Medium';
+               font-weight: 100;
+               font-size: 13px;
+            }
+   
+            .time {
+               color: #777e8c;
+               font-size: 12.5px;
+            }
+         }
+   
+         .last-message {
+            display: flex;
+            align-items: center;
+   
+            img {
+               width: 25px;
+               height: 25px;
+               border-radius: 100%;
+               margin-right: 8px;
+            }
+   
+            span {
+               flex-grow: 1;
+               // Don't know why, but that's doesn't work without that
+               width: 0;
+               font-size: 13px;
+               padding-right: 63px;
+               color: #4e5966;
+               border-radius: 3px;
+               overflow: hidden;
+               white-space: nowrap;
+               text-overflow: ellipsis;
+               
+               &.unread {
+                  padding: 5px 55px 5px 8px;
+                  background: #F0F2F5;
+               }
+            }
+         }
+      }
+   }
+}
