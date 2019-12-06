@@ -1,0 +1,13 @@
+<div class="auth-page">
+   <app-header></app-header>
+
+   <div class="auth-panel wrapper-with-shadow">
+      <input type="text" name="name" placeholder="Ваше имя" [(ngModel)]="nameText" />
+      <input type="password" name="password" placeholder="Пароль" [(ngModel)]="passwordText" />
+
+      <div class="button-panel">
+         <button (click)="onSubmit()">{{buttonPanelContent.button}}</button>
+         <span (click)="redirectAtAnotherPage()">{{buttonPanelContent.span}}</span>
+      </div>
+   </div>
+</div>

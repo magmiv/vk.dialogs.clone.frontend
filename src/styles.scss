@@ -28,3 +28,10 @@
    outline: none;
    border: none;
  }
+
+ .wrapper-with-shadow {
+  background-color: #fff;
+  border: 1px solid #E3E4E8;
+  border-radius: 5px;
+  box-shadow: 0 0.5px 1px 1px #e3e4e8;
+}
