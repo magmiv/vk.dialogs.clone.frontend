@@ -8,4 +8,19 @@
    z-index: 50;
    top: 0;
    left: 0;
+
+   .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      width: calc(#{$content-width} + 325px);
+      height: $header-height;
+
+      .functional-panel {
+         width: $content-width;
+         height: $header-height;
+         background-color: #fff;
+      }
+   }
 }
